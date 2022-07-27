@@ -1,0 +1,37 @@
+.movie-selection {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.movie-selection> :nth-child(1) {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    display: flex;
+    justify-content: center;
+    color: #293845;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+.movie-selection img {
+    width: 129px;
+    height: 193px;
+}
+
+.movies {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 145px;
+    height: 209px;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+    margin-left: 25px;
+    margin-bottom: 15px;
+}
