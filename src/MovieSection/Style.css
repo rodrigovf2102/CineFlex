@@ -1,0 +1,76 @@
+.movie-section {
+    margin-left: 15px;
+}
+
+.titulo {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #293845;
+}
+
+.datas {
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.horarios {
+    display: flex;
+}
+
+.horario {
+    width: 83px;
+    height: 43px;
+    left: 23px;
+    top: 227px;
+    background: #E8833A;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: white;
+}
+
+a{
+    text-decoration: none;
+}
+.fundo {
+    width: 100%;
+    height: 117px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #293845;
+    background: #DFE6ED;
+    border-top: 1px solid #9EADBA;
+}
+
+.fundo img {
+    background: #FFFFFF;
+    box-shadow: 0px 0px 0px 6px rgba(255, 255, 255);
+    width: 48px;
+    margin-left: 25px;
+    margin-right: 15px;
+}

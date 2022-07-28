@@ -1,14 +1,15 @@
-import './MovieSelection.css';
+import './Style.css';
 import axios from 'axios';
 import {useState, useEffect} from 'react';
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
+import Movie from '../Movie';
 
-export default function MovieSelection({movieSelected}) {
+export default function MovieSelection() {
 
-    const [movies,setMovies] = useState([]);  
+    const [movies,setMovies] = useState([]);
 
 	useEffect(() => {
-		const requisicao = axios.get('https://mock-api.driven.com.br/api/v5/cineflex/movies');
+		const requisicao = axios.get(`https://mock-api.driven.com.br/api/v5/cineflex/movies`);
 		requisicao.then(resposta => {
 			setMovies(resposta.data);
 		});
@@ -18,9 +19,7 @@ export default function MovieSelection({movieSelected}) {
         <div className="movie-selection">
             <div>Selecione o Filme</div>
             {movies.map(
-                movie=> <Link to={"/sessoes/"+movie.id}><div key={movie.id} onClick={()=>movieSelected(movie.id,movie.title)} className='movies'>
-                            <img src={movie.posterURL}/>
-                        </div></Link>
+                movie=> <Link to={`/sessoes/${movie.id}`}><Movie movieid={movie.id} movieURL={movie.posterURL}/></Link>
                         )
             }
         </div>
