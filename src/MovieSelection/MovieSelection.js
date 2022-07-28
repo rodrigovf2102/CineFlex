@@ -2,7 +2,7 @@ import './Style.css';
 import axios from 'axios';
 import {useState, useEffect} from 'react';
 import {Link} from 'react-router-dom';
-import Movie from '../Movie';
+import Movie from './Movie';
 
 export default function MovieSelection() {
 

@@ -20,7 +20,7 @@ export default function MovieSection() {
             <>
                 <div className='movie-section'>
                     <div className='titulo'>Selecione o horário</div>
-                    <div> {movieInfo.days.map(day =>
+                    <div className='sections'> {movieInfo.days.map(day =>
                         <div>
                             <div className='datas'>{`${day.weekday} `}-{` ${day.date}`}</div>
                             <div className='horarios'>{day.showtimes.map(showtime => <Link to={`/assentos/${showtime.id}`}><div className='horario'>{showtime.name}</div></Link>)}</div>

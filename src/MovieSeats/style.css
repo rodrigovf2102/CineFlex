@@ -25,9 +25,8 @@
 .seats {
     display: flex;
     width: 370px;
-    height: 170px;
+    height: 180px;
     flex-wrap: wrap;
-    overflow-x: scroll;
     justify-content: center;
     padding-left: 10px;
     padding-right: 10px;
@@ -59,4 +58,109 @@
 .alocado {
     background: #8DD7CF;
     border: 1px solid #45BDB0;
+}
+
+.legenda {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.margin-right {
+    margin-right: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.margin-left {
+    margin-left: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.margin-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info :nth-child(1) {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    width: 327px;
+}
+.info :nth-child(3) {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    width: 327px;
+}
+input {
+    width: 327px;
+    height: 51px;
+    background: #FFFFFF;
+    border: 1px solid #D5D5D5;
+    border-radius: 3px;
+}
+
+.botao {
+    margin-top: 50px ;
+    width: 225px;
+    height: 42px;
+    background: #E8833A;
+    border-radius: 3px;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 18px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fundo {
+    width: 100%;
+    height: 117px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #293845;
+    background: #DFE6ED;
+    border-top: 1px solid #9EADBA;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+.movie-title{
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.movie-day{
+    display: flex;
 }
