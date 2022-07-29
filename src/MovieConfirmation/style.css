@@ -1,0 +1,77 @@
+.titulo {
+    width: 180px;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #247A6B;
+    margin-bottom: 40px;
+}
+
+.centralizado {
+    display: flex;
+    justify-content: center;
+}
+
+.filme-sessao :nth-child(1) {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    margin-left: 25px;
+    color: #293845;
+    margin-bottom: 10px;
+}
+
+.filme-sessao :nth-child(2) {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    margin-left: 25px;
+    color: #293845;
+    margin-bottom: 5px;
+}
+
+.filme-sessao :nth-child(3) {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    margin-left: 25px;
+    color: #293845;
+}
+
+.ingressos :nth-child(1) {
+    margin-top: 40px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    margin-left: 25px;
+    color: #293845;
+    margin-bottom: 10px;
+}
+
+.ingressos div:not(:first-child) {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    margin-left: 25px;
+    color: #293845;
+    margin-bottom: 5px;
+}
+
+button {
+    width: 225px;
+    height: 42px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #E8833A;
+    border-radius: 3px;
+    color: white;
+    margin-top: 60px;
+}

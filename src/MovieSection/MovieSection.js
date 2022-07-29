@@ -9,7 +9,7 @@ export default function MovieSection() {
     const [movieInfo, setMovieInfo] = useState({ id: 0 });
 
     useEffect(() => {
-        const requisicao = axios.get(`https://mock-api.driven.com.br/api/v5/cineflex/movies/${idMovie}/showtimes`);
+        const requisicao = axios.get(`https://mock-api.driven.com.br/api/v7/cineflex/movies/${idMovie}/showtimes`);
         requisicao.then(resposta => {
             setMovieInfo({ ...resposta.data });
         });
@@ -23,7 +23,11 @@ export default function MovieSection() {
                     <div className='sections'> {movieInfo.days.map(day =>
                         <div>
                             <div className='datas'>{`${day.weekday} `}-{` ${day.date}`}</div>
-                            <div className='horarios'>{day.showtimes.map(showtime => <Link to={`/assentos/${showtime.id}`}><div className='horario'>{showtime.name}</div></Link>)}</div>
+                            <div className='horarios'>{day.showtimes.map(showtime => 
+                                <Link to={`/assentos/${showtime.id}`}>
+                                    <div className='horario'>{showtime.name}</div>
+                                </Link>)}
+                            </div>
                         </div>
                                             )
                           }
