@@ -48,6 +48,9 @@ export default function MovieSeats({setClientName,clientName,setClientCPF,client
             sectionSeats.seats[index].isAvailable = true;
             setSectionSeats({ ...sectionSeats });
         }
+        if(!isAvailable){
+            alert("Assento nao disponível");
+        }
     }
 
     function clientInfo(event) {
