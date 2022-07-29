@@ -40,4 +40,11 @@ export default function MovieSection() {
             </>
         );
     }
+    else{
+        return (
+            <div className="carregando">
+                Carregando...
+            </div>
+        );
+    }
 }

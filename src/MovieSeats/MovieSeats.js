@@ -34,7 +34,6 @@ export default function MovieSeats({setClientName,clientName,setClientCPF,client
         }
         setMovieInfo({...movieInfo});
         const requisicao = axios.post("https://mock-api.driven.com.br/api/v7/cineflex/seats/book-many", postMovieInfo );
-        console.log(postMovieInfo);
     }
     
 
@@ -89,5 +88,12 @@ export default function MovieSeats({setClientName,clientName,setClientCPF,client
                 </div>
             </>
         )
+    }
+    if(sectionSeats.id===0){
+        return(
+            <div className="carregando">
+                Carregando...
+            </div>
+        );
     }
 }

@@ -22,7 +22,8 @@ function App() {
           <Route path={"/sessoes/:idMovie"} element={<MovieSection />}/>
           <Route path={"/assentos/:idSection"} element={<MovieSeats setClientName={setClientName} clientName={clientName}
                  setClientCPF={setClientCPF} clientCPF={clientCPF} setMovieInfo={setMovieInfo} movieInfo={movieInfo}/>}/>
-          <Route path={"/sucesso"} element={<MovieConfirmation clientName={clientName} clientCPF={clientCPF} movieInfo={movieInfo}/>}/>
+          <Route path={"/sucesso"} element={<MovieConfirmation clientName={clientName} setClientName={setClientName} 
+                                   setClientCPF={setClientCPF} clientCPF={clientCPF} movieInfo={movieInfo}/>}/>
         </Routes>
       </BrowserRouter>
     </>
