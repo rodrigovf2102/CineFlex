@@ -7,7 +7,26 @@
     font-size: 34px;
     line-height: 40px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     color: #E8833A;
+    position: fixed;
+    top:0px;
+    left: 0px;
+}
+
+.Topo :nth-child(1){
+    width: auto;
+    height: 50px;
+    background-color: rgb(150, 150, 150);
+    border-radius: 10px;
+    margin-left: 10px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hidden{
+    display: none;
 }
