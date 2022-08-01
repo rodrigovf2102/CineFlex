@@ -1,14 +1,15 @@
 import { Link } from 'react-router-dom';
 import './style.css';
 
-export default function MovieConfirmation({ clientName,setClientName,setClientCPF, clientCPF, movieInfo }) {
+export default function MovieConfirmation({ clientName,setClientName,setClientCPF, clientCPF, movieInfo, setMovieInfo}) {
 
     function zerarAssentos() {
         movieInfo.movieSeats = [];
         setClientCPF("");
         setClientName("");
+        setMovieInfo({...movieInfo})
     }
-
+    
     let titulo = "Pedido feito com sucesso!";
     let cortitulo = "";
 
@@ -16,7 +17,6 @@ export default function MovieConfirmation({ clientName,setClientName,setClientCP
     if (clientCPF === "") clientCPF = "Não informado";
     if (movieInfo.movieSeats[0] === undefined) {
         titulo = "Assentos não selecionados";
-        movieInfo.movieSeats[0] = "não selecionado";
         cortitulo = "red";
     }
 
@@ -32,7 +32,8 @@ export default function MovieConfirmation({ clientName,setClientName,setClientCP
             </div>
             <div className='ingressos'>
                 <div>Ingressos</div>
-                {movieInfo.movieSeats.map(seat => <div>{`Assento ${seat}`}</div>)}
+                {movieInfo.movieSeats[0] !== undefined ? 
+                 movieInfo.movieSeats.map(seat => <div>{`Assento ${seat}`}</div> ): <div>Assento nao selecionado</div>}
             </div>
             <div className='ingressos'>
                 <div>Comprador</div>

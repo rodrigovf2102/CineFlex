@@ -10,20 +10,21 @@ import MovieConfirmation from './MovieConfirmation/MovieConfirmation';
 function App() {
 
   const [clientName, setClientName] = useState("");
-  const [clientCPF,setClientCPF] = useState("");
-  const [movieInfo,setMovieInfo] = useState({movieSeats:[],movieName:"",movieDate:"",movieTime:""});
+  const [clientCPF, setClientCPF] = useState("");
+  const [movieInfo, setMovieInfo] = useState({ movieSeats: [], movieName: "", movieDate: "", movieTime: "" });
 
   return (
     <>
       <BrowserRouter>
-        <Topo />
+        <Topo setClientName={setClientName}
+            setClientCPF={setClientCPF} movieInfo={movieInfo} setMovieInfo={setMovieInfo}/>
         <Routes>
-          <Route path="/" element={<MovieSelection/>}/>
-          <Route path={"/sessoes/:idMovie"} element={<MovieSection />}/>
+          <Route path="/" element={<MovieSelection  />} />
+          <Route path={"/sessoes/:idMovie"} element={<MovieSection />} />
           <Route path={"/assentos/:idSection"} element={<MovieSeats setClientName={setClientName} clientName={clientName}
-                 setClientCPF={setClientCPF} clientCPF={clientCPF} setMovieInfo={setMovieInfo} movieInfo={movieInfo}/>}/>
-          <Route path={"/sucesso"} element={<MovieConfirmation clientName={clientName} setClientName={setClientName} 
-                                   setClientCPF={setClientCPF} clientCPF={clientCPF} movieInfo={movieInfo}/>}/>
+            setClientCPF={setClientCPF} clientCPF={clientCPF} setMovieInfo={setMovieInfo} movieInfo={movieInfo} />} />
+          <Route path={"/sucesso"} element={<MovieConfirmation clientName={clientName} setClientName={setClientName}
+            setClientCPF={setClientCPF} clientCPF={clientCPF} movieInfo={movieInfo} setMovieInfo={setMovieInfo} />} />
         </Routes>
       </BrowserRouter>
     </>
