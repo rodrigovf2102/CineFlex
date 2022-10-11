@@ -9,7 +9,7 @@ export default function MovieSection() {
     const [movieInfo, setMovieInfo] = useState({ id: 0 });
 
     useEffect(() => {
-        const requisicao = axios.get(`https://mock-api.driven.com.br/api/v7/cineflex/movies/${idMovie}/showtimes`);
+        const requisicao = axios.get(`https://mock-api.driven.com.br/api/v5/cineflex/movies/${idMovie}/showtimes`);
         requisicao.then(resposta => {
             setMovieInfo({ ...resposta.data });
         });

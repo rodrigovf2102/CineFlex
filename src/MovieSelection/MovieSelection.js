@@ -9,7 +9,7 @@ export default function MovieSelection() {
     const [movies, setMovies] = useState([{ id: 0 }]);
 
     useEffect(() => {
-        const requisicao = axios.get(`https://mock-api.driven.com.br/api/v7/cineflex/movies`);
+        const requisicao = axios.get(`https://mock-api.driven.com.br/api/v5/cineflex/movies`);
         requisicao.then(resposta => {
             setMovies(resposta.data);
         });

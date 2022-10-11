@@ -9,11 +9,13 @@ export default function MovieSeats({setClientName,clientName,setClientCPF,client
     const { idSection } = useParams();
     const [sectionSeats, setSectionSeats] = useState({ id: 0 });
     const postMovieInfo = {ids:[],name:"",cpf:""};
+    console.log(sectionSeats)
 
     useEffect(() => {
-        const requisicao = axios.get(`https://mock-api.driven.com.br/api/v7/cineflex/showtimes/${idSection}/seats`);
+        const requisicao = axios.get(`https://mock-api.driven.com.br/api/v5/cineflex/showtimes/${idSection}/seats`);
         requisicao.then(resposta => {
             setSectionSeats({ ...resposta.data });
+            
         });
     }, []);
 
@@ -32,7 +34,7 @@ export default function MovieSeats({setClientName,clientName,setClientCPF,client
             movieInfo.movieTime = sectionSeats.name;
         }
         setMovieInfo({...movieInfo});
-        const requisicao = axios.post("https://mock-api.driven.com.br/api/v7/cineflex/seats/book-many", postMovieInfo );
+        const requisicao = axios.post("https://mock-api.driven.com.br/api/v5/cineflex/seats/book-many", postMovieInfo );
     }
     
 
