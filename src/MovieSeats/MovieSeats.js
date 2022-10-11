@@ -9,7 +9,6 @@ export default function MovieSeats({setClientName,clientName,setClientCPF,client
     const { idSection } = useParams();
     const [sectionSeats, setSectionSeats] = useState({ id: 0 });
     const postMovieInfo = {ids:[],name:"",cpf:""};
-    console.log(sectionSeats)
 
     useEffect(() => {
         const requisicao = axios.get(`https://mock-api.driven.com.br/api/v5/cineflex/showtimes/${idSection}/seats`);
